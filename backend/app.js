@@ -22,7 +22,6 @@ app.use(
 
 const productRoutes = require("./routes/productRoutes");
 
-// All product routes start with /products
 app.use("/products", productRoutes);
 
 app.get("/", (req, res) => {
