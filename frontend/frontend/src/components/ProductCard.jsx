@@ -26,6 +26,8 @@ function ProductCard({ source }) {
         gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
         gap: "20px",
         padding: "20px",
+        width: "40%",
+        height: "50%",
       }}
     >
       {products.map((product) => (
@@ -48,6 +50,7 @@ function ProductCard({ source }) {
               height: "180px",
               objectFit: "contain",
                 marginBottom: "10px",
+                marginTop: "10px",
             }}
           />
 
