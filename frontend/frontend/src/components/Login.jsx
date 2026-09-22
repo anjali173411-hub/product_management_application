@@ -66,8 +66,7 @@ function Login({ setIsLoggedIn, setShowRegister }) {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "/api",
+      const response = await axios.post("/api/authorisation/login",
         {
           email,
           password,

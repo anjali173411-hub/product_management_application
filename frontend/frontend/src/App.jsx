@@ -89,7 +89,7 @@ function App() {
     );
   }
 
-  // Show Product Management App after login
+  
   return (
     <>
       <Navbar />

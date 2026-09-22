@@ -96,7 +96,7 @@ function ProductCard({ source }) {
           const token = localStorage.getItem("token");
 
           response = await axios.get(
-            "/api",
+            "/api/products",
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -105,7 +105,7 @@ function ProductCard({ source }) {
           );
         } else {
           response = await axios.get(
-            "/api"
+            "/api/products"
           );
         }
 

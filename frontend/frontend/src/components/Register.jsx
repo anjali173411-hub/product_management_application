@@ -63,7 +63,7 @@ function Register({ setShowRegister }) {
 
     try {
       const response = await axios.post(
-        "/api",
+        "/api/authorisation/register",
         {
           email,
           password,
@@ -77,7 +77,7 @@ function Register({ setShowRegister }) {
       setEmail("");
       setPassword("");
 
-      // Go back to Login
+      
       setShowRegister(false);
     } catch (error) {
       console.log(error);
