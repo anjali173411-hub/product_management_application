@@ -10,8 +10,6 @@ connectDB();
 
 const app = express();
 
-app.disable("x-powered-by");
-
 app.use(express.json());
 
 app.use(
@@ -20,9 +18,12 @@ app.use(
   })
 );
 
-const productRoutes = require("./routes/productRoutes");
+// Authorization routes
+const authorisationRoutes = require("./routes/authorisationRoutes");
+app.use("/authorisation", authorisationRoutes);
 
-// All product routes start with /products
+// Product routes
+const productRoutes = require("./routes/productRoutes");
 app.use("/products", productRoutes);
 
 app.get("/", (req, res) => {
